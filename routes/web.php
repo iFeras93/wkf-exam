@@ -34,6 +34,11 @@ Route::get('/dashboard', function () {
     ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+
+Route::get('transactions/{account_id}', [\App\Http\Controllers\TransactionController::class, 'index']);
+Route::get('make-transactions/{account_id}', [\App\Http\Controllers\TransactionController::class, 'showTransactionForm'])->name('ShowMakeTransaction');
+Route::post('make-transactions', [\App\Http\Controllers\TransactionController::class, 'makeTransaction'])->name('postTransaction');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
