@@ -62,7 +62,7 @@ function submit() {
                         <div class="p-5 grow md:flex md:space-x-5">
                             <p class="md:flex-none md:w-1/3 text-gray-500 text-sm mb-5 dark:text-gray-400">
                             </p>
-                            <form class="space-y-6 md:w-1/2" method="post"  @submit.prevent="submit">
+                            <form class="space-y-6 md:w-1/2" method="post" @submit.prevent="submit">
 
                                 <input type="hidden" name="account_id" v-model="form.account_id">
                                 <div class="space-y-1">
@@ -84,12 +84,12 @@ function submit() {
                                            placeholder="0.00"
                                            class="w-full block border placeholder-gray-500 px-3 py-2 leading-6 rounded-lg border-gray-200 focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 dark:bg-gray-800 dark:border-gray-600 dark:focus:border-indigo-500 dark:placeholder-gray-400">
 
-<!--                                    <div v-if="form.errors.amount">{{ form.errors.amount }}</div>-->
+                                    <!--                                    <div v-if="form.errors.amount">{{ form.errors.amount }}</div>-->
 
                                 </div>
                                 <button type="submit"
                                         class="inline-flex justify-center items-center space-x-2 border font-semibold rounded-lg px-3 py-2 leading-5 text-sm border-indigo-700 bg-indigo-700 text-white hover:text-white hover:bg-indigo-600 hover:border-indigo-600 focus:ring focus:ring-indigo-400 focus:ring-opacity-50 active:bg-indigo-700 active:border-indigo-700 dark:focus:ring-indigo-400 dark:focus:ring-opacity-90">
-                                    Update Profile
+                                    Make Transaction
                                 </button>
                             </form>
                         </div>
